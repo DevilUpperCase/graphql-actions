@@ -34,7 +34,7 @@ jobs:
       - name: Build the Docker Image
         run: |
           echo "Iniciando build"
-          docker login build -t deviluppercase/graphql-actions:1.0.0 .
+          docker build -t deviluppercase/graphql-actions:1.0.0 .
           echo "Fin del build"
       - name: Push the Docker Image
         run: |
