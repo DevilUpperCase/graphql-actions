@@ -34,6 +34,7 @@ jobs:
       - name: Build the Docker Image
         run: |
           docker build -t deviluppercase/graphql-actions:1.0.0 .
+          docker build -t deviluppercase/graphql-actions:latest .
       - name: Push the Docker Image
         run: |
           docker push -t deviluppercase/graphql-actions:1.0.0
