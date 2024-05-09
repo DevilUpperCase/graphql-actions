@@ -30,3 +30,14 @@ jobs:
           echo "Iniciando login"
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
           echo "Fin del login"
+
+      - name: Build the Docker Image
+        run: |
+          echo "Iniciando build"
+          docker login build -t deviluppercase/graphql-actions:1.0.0 .
+          echo "Fin del build"
+      - name: Push the Docker Image
+        run: |
+          echo "Iniciando push"
+          docker push -t deviluppercase/graphql-actions:1.0.0 .
+          echo "Fin del push"
